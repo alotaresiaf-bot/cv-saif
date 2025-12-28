@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سيف الإسلام الوتاري | مصمم ويب وجرافيك</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent: #f7a600; --bg: #0b0e11; --card: #1e2329; --text: #ffffff; }
+        body { font-family: 'Cairo', sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 0; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        /* الهيدر */
+        header { background: linear-gradient(135deg, #1e2329, #0b0e11); padding: 40px; border-radius: 20px; text-align: center; border-bottom: 5px solid var(--accent); margin-bottom: 30px; }
+        .profile-img { width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover; }
+        
+        /* الأقسام */
+        section { background: var(--card); padding: 25px; border-radius: 15px; margin-bottom: 25px; }
+        h2 { color: var(--accent); border-right: 4px solid var(--accent); padding-right: 10px; font-size: 1.5rem; }
+        
+        /* شبكة المهارات والأعمال */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .info-box { background: rgba(255,255,255,0.05); padding: 15px; border-radius: 10px; }
+        
+        /* زر المشروع المميز */
+        .btn-link { display: block; background: var(--accent); color: #000; text-align: center; padding: 15px; border-radius: 10px; font-weight: bold; text-decoration: none; margin-top: 20px; transition: background 0.3s; }
+        .btn-link:hover { background: #e09500; }
+
+        /* صور الأعمال */
+        .work-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 15px; }
+        .work-gallery img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; border: 1px solid #444; }
+
+        /* CV Image */
+        .cv-image-section { text-align: center; }
+        .cv-image-section img { max-width: 100%; border-radius: 10px; border: 2px solid var(--accent); margin-top: 15px; }
+
+        /* Audio Controls */
+        .audio-controls { text-align: center; margin-top: 20px; }
+        .audio-controls button { background: #334155; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; margin: 0 5px; transition: background 0.3s; }
+        .audio-controls button:hover { background: #475569; }
+
+        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9rem; }
+    </style>
+</head>
+<body onload="startVoice()">
+
+    <div class="container">
+        <header>
+            <img src="https://alotaresiaf-bot.github.io/portfolio/saif-profile.jpg" class="profile-img" alt="صورة سيف الإسلام">
+            <h1>سيف الإسلام محمد الوتاري</h1>
+            <p>مصمم جرافيك ومطور ويب | مصلح اجتماعي | وعاشق لكرة القدم ⚽</p>
+        </header>
+
+        <section class="audio-controls">
+            <button onclick="stopVoice()">إيقاف الصوت</button>
+            <button onclick="startVoice()">تشغيل الصوت</button>
+        </section>
+
+        <div class="grid">
+            <section>
+                <h2>🌟 المميز في شخصيتي</h2>
+                <ul>
+                    <li>العطاء ومساعدة الآخرين (Giving + Helping others)</li>
+                    <li>حب التعلم والتعايش السلمي (Learning + Living together)</li>
+                    <li>اللطف والتعامل الإنساني مع الناس</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>🚀 طموحاتي وأهدافي</h2>
+                <p>أسعى لترك أثر إيجابي من خلال مهاراتي في التصميم والبرمجة، ودمج التكنولوجيا في خدمة المجتمع.</p>
+            </section>
+        </div>
+
+        <section>
+            <h2>💼 خبراتي العملية</h2>
+            <div class="info-box">
+                <p>• سنتان من الخبرة في شركة "New Life" للدعاية والإعلان</p>
+                <p>• خبرة لمدة سنة في مكتبة الخليج العربي</p>
+                <p>• عملت لمدة 4 أشهر في مطابع الواحة</p>
+            </div>
+        </section>
+
+        <section class="cv-image-section">
+            <h2>📄 سيرتي الذاتية (CV)</h2>
+            <p>يمكنك الإطلاع على نسختي الكاملة من السيرة الذاتية هنا:</p>
+            <img src="https://alotaresiaf-bot.github.io/portfolio/saif-cv.jpg" alt="صورة السيرة الذاتية">
+        </section>
+
+        <section>
+            <h2>🎨 معرض أعمالي الإبداعية</h2>
+            <p>أبرز تصاميمي في الجرافيك ومشاريع الويب:</p>
+            <div class="work-gallery">
+                <img src="https://alotaresiaf-bot.github.io/portfolio/abu-khaled-hamid.jpg" alt="تصميم أبو خالد حميد">
+                <img src="https://via.placeholder.com/250x180?text=تصميم+جرافيك+1" alt="تصميم جرافيك 1">
+                <img src="https://via.placeholder.com/250x180?text=تصميم+جرافيك+2" alt="تصميم جرافيك 2">
+                <img src="https://via.placeholder.com/250x180?text=تصميم+جرافيك+3" alt="تصميم جرافيك 3">
+                <img src="https://via.placeholder.com/250x180?text=مشروع+ويب+1" alt="مشروع ويب 1">
+                <img src="https://via.placeholder.com/250x180?text=مشروع+ويب+2" alt="مشروع ويب 2">
+            </div>
+            <a href="https://alotaresiaf-bot.github.io/saif-pro/" class="btn-link" style="margin-top: 25px;">زيارة مشروع Saif Pro Elite للويب 🔗</a>
+        </section>
+
+        <footer>
+            سيف الإسلام الوتاري - صنعاء، اليمن | الهاتف: 775252009 | البريد الإلكتروني: SYFWTARY@GMAIL.COM
+        </footer>
+    </div>
+
+    <script>
+        let currentUtterance = null; // لتخزين كائن النطق الحالي
+
+        function startVoice() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel(); // إيقاف أي نطق سابق
+            }
+            const text = "أهلاً بكم في الموقع الشخصي لسيف الإسلام الوتاري. مصمم جرافيك، ومطور واجهات ويب، ومحب للخير وكرة القدم. يمكنك استعراض جميع أعمالي هنا والتعرف على خبراتي ومميزات شخصيتي. كما يمكنك التواصل معي مباشرة";
+            currentUtterance = new SpeechSynthesisUtterance(text);
+            currentUtterance.lang = 'ar-SA';
+            currentUtterance.rate = 0.9;
+            window.speechSynthesis.speak(currentUtterance);
+        }
+
+        function stopVoice() {
+            if (window.speechSynthesis.speaking) {
+                window.speechSynthesis.cancel();
+            }
+        }
+    </script>
+</body>
+</html>
